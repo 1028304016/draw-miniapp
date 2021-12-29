@@ -1,0 +1,28 @@
+<form bindsubmit="formSubmit" >
+
+	<view class="userinfo">
+		<view class="title">
+			<label class="label">抽签人</label>
+			<text class="log-item">{{drawName}}</text>
+		</view>
+		<block class="title">—————————————————</block>
+	</view>
+
+	<view class="btn-area">
+		<button disabled='{{disabled}}' formType="reset" type="primary" bindtap="startTouch">{{buttonName}}</button>
+		<button hidden='{{istryagain}}' formType="reset" type="primary" bindtap="getDrawName">再来一次</button>
+	</view>
+	<view class="mark" wx:if="{{maskShow}}">
+	</view>
+	<view class="userinfo">
+		<view class="title">
+			<label class="label">抽签结果</label>
+			<view>
+				<view wx:for="{{selects}}" wx:for-item="selectone" wx:key="key" class="sel-result">
+					<view class="sel-name">{{selectone.name}}</view>
+					<view class="sel-con">{{selectone.content}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</form>

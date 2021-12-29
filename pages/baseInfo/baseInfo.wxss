@@ -1,0 +1,134 @@
+/* 列表 */
+.list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+}
+/* 列表内容 */
+.list .txt {
+    flex-grow: 1;
+    width: 100%;
+    margin-left: -150rpx;
+    background-color: #fff;
+}
+/* 删除按钮 */
+.list .del {
+    flex-grow: 0;
+    width: 80rpx;
+    color: #fff;
+    background-color: #fe3e2f;
+}
+
+.list .txt, .list .del {
+    transform: translateX(150rpx);
+    transition: all 0.4s;
+}
+.touch-move-active .txt,.touch-move-active .del {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.table {
+ border: 0px solid darkgray;
+}
+.tr {
+ display: flex;
+ width: 100%;
+ justify-content: center;
+ height: 3rem;
+ align-items: center;
+}
+.td {
+ width:40%;
+ justify-content: center;
+ text-align: center;
+}
+/* .bg-w{
+ background: snow;
+} */
+/* .bg-g{
+ background: #E6F3F9;
+} */
+.th{
+ width: 40%;
+ justify-content: center;
+ display: flex;
+ height: 3rem;
+ align-items: center;
+}
+.nameW{
+	width: 20%;
+}
+
+.mark{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgb(182, 182, 182,0.3);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.modal{
+	width: 80%;
+	height: 600rpx;
+	margin: 20rpx auto;
+	position: absolute;
+	border-radius: 20rpx;
+	background-color: #fff;
+	top: 10%;
+	left: 10%;
+	z-index: 6;
+	cursor: pointer;
+	}
+ 
+.btn{
+  color: #fff;
+  font-size: 31rpx;
+  background-color: #f95137;
+  margin: 11rpx 20rpx 0rpx;
+  border-radius: 45rpx;
+  width: 215rpx;
+  height: 81rpx;
+  line-height: 81rpx;
+  /* padding-left: ;   */
+  }
+.btnFlex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ /* margin-top: 50rpx; */
+}
+.dialog-head{
+  font-size: 33rpx;
+  color: #172238;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 20rpx;  
+  border-bottom: 1rpx solid #e1e5e9;
+}
+ 
+/* 文本域 */
+.textarea {
+  width: 92%;
+  height: 246rpx;
+  margin: 20rpx 30rpx;
+  margin-top: 20rpx;
+  padding: 20rpx;
+  border-radius: 6rpx;
+  border: solid 1rpx #e7eaf0;
+  background-color: #f4f6f9;
+}
+.radio {
+  width: 33%
+}
+.section_gap {
+  margin: 20rpx 30rpx;
+}

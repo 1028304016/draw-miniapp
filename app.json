@@ -1,0 +1,16 @@
+{
+  "pages": [
+	
+	"pages/index/index",
+	"pages/history/history",
+	"pages/drawlots/drawlots",
+	"pages/baseInfo/baseInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "幸运抽签",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

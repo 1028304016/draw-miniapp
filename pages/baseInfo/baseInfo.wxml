@@ -1,0 +1,50 @@
+<view class="table">
+	<view class="tr bg-w">
+		<view class="th nameW">人员</view>
+		<view class="th">值日内容</view>
+		<view class="th">操作</view>
+	</view>
+	<!-- wx:key="{[code]}"-->
+	<block wx:for="{{list}}" wx:for-item="item" wx:key="key" >
+		<view class="tr bg-w">
+			<view class="th nameW">{{item.name}}</view>
+			<view class="th">{{item.content}}</view>
+			<button data-editid="{{item.id}}" class="next-btn" size="mini" type="primary" bindtap="updateBaseInfo" data-type="修改">修改</button>
+			<button data-editid="{{item.id}}" class="next-btn" size="mini" type="warn" bindtap="delBaseInfo" data-type="删除">删除</button>
+		</view>
+	</block>
+
+	<view class="mark" wx:if="{{popupShow}}">
+		<view class="modal" wx:if="{{ popupShow }}">
+			<form catchsubmit="formSubmit" catchreset="formReset">
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<view style="margin: 30rpx 20rpx">姓名</view>
+							<view class="weui-cell__bd" style="margin: 30rpx 20rpx">
+								<input class="weui-input" name="name" :value="{{name}}" placeholder="请输入姓名" />
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view style="margin-left: 20rpx;">值日内容</view>
+						<view class="weui-cell weui-cell_input">
+							<view class="weui-cell__bd" style="margin: 30rpx 20rpx">
+								<input class="weui-input" name="content" :value="{{content}}" placeholder="请输入值日内容" />
+							</view>
+						</view>
+					</view>
+				</view>
+
+				<view class="btn-area" style="display: flex;justify-content: center;">
+					<button style="margin: 30rpx 0" size="mini" type="primary" formType="submit">保存</button>
+					<button style="margin: 30rpx 20rpx" size="mini" formType="reset">取消</button>
+				</view>
+			</form>
+
+
+		</view>
+	</view>
+</view>

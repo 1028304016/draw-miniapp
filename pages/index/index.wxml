@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+
+	<view class="userinfo">
+		<button class="next-btn" type="primary" bindtap="problowTypeClick" data-type="开始抽签">开始抽签</button>
+		<view class="selectAll">
+			<button class="next-btn" type="default" bindtap="selectClick">查看历史数据</button>
+		</view>
+		<view class="selectAll">
+			<button class="next-btn" type="default" bindtap="baseInfoClick">人员维护</button>
+		</view>
+	</view>
+
+</view>
